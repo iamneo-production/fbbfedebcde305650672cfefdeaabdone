@@ -7,11 +7,31 @@ public class Students {
     private String firstName;
     private String lastName;
 
-    // Getters and setters
-    // ...
+    public int getStudentId() {
+        return studentId;
+    }
 
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
+
 
 public class Student {
     public static void main(String[] args) {
@@ -24,8 +44,8 @@ public class Student {
         System.out.println("Last Name: " + javaStudent.getLastName());
 
         // Using XML configuration
-        ApplicationContext xmlContext = new ClassPathXmlApplicationContext("./resources/applicationContext.xml");
-        Student xmlStudent = xmlContext.getBean("student", Student.class);
+        ApplicationContext xmlContext = new ClassPathXmlApplicationContext("resources/applicationContext.xml");
+        Students xmlStudent = xmlContext.getBean("students", Students.class);
         System.out.println("\nXML Config Student Details:");
         System.out.println("ID: " + xmlStudent.getStudentId());
         System.out.println("First Name: " + xmlStudent.getFirstName());
