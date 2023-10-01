@@ -37,7 +37,7 @@ public class Student {
     public static void main(String[] args) {
         // Using Java-based configuration
         ApplicationContext javaContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        Students javaStudent = javaContext.getBean("students", Students.class);
+        Student javaStudent = javaContext.getBean("student", Student.class);
         System.out.println("Java Config Student Details:");
         System.out.println("ID: " + javaStudent.getStudentId());
         System.out.println("First Name: " + javaStudent.getFirstName());
@@ -45,7 +45,7 @@ public class Student {
 
         // Using XML configuration
         ApplicationContext xmlContext = new ClassPathXmlApplicationContext("resources/applicationContext.xml");
-        Students xmlStudent = xmlContext.getBean("students", Students.class);
+        Student xmlStudent = xmlContext.getBean("student", Students.class);
         System.out.println("\nXML Config Student Details:");
         System.out.println("ID: " + xmlStudent.getStudentId());
         System.out.println("First Name: " + xmlStudent.getFirstName());
