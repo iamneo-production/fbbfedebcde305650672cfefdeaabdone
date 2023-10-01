@@ -45,7 +45,7 @@ public class Student {
 
         // Using XML configuration
         ApplicationContext xmlContext = new ClassPathXmlApplicationContext("resources/applicationContext.xml");
-        Student xmlStudent = xmlContext.getBean("student", Students.class);
+        Student xmlStudent = xmlContext.getBean("student", Student.class);
         System.out.println("\nXML Config Student Details:");
         System.out.println("ID: " + xmlStudent.getStudentId());
         System.out.println("First Name: " + xmlStudent.getFirstName());
