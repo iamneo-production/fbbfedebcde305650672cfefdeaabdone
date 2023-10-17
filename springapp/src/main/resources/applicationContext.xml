@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-    <bean id="student" class="com.example.Student">
+    <bean id="student" class="com.examly.springapp">
         <property name="studentId" value="123" />
         <property name="firstName" value="John" />
         <property name="lastName" value="Doe" />
